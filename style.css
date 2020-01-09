@@ -5,20 +5,29 @@ body {font-family: "Arial Black", Gadget, sans-serif;}
 h2 {color: #12ab}
 h2 {font-family: "Courier New", monospace;}
 
-body {margin:0;}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
+
 li {
   float: left;
 }
+
 li a {
   display: block;
   color: white;
@@ -26,10 +35,7 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-li a:hover:not(.active) {
+
+li a:hover {
   background-color: #111;
 }
-.active {
-  background-color: #4CAF50;
-}
-
